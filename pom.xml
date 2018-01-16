@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <serenity.version>1.8.20</serenity.version>
+        <serenity.version>1.6.3</serenity.version>
         <junit.version>4.12</junit.version>
         <slf4j.version>1.7.25</slf4j.version>
         <maven.failsafe.plugin.version>2.19.1</maven.failsafe.plugin.version>
