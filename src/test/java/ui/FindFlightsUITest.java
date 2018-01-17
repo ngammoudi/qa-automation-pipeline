@@ -3,6 +3,7 @@ package ui;
 import java.net.URL;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
+import net.thucydides.core.annotations.WithTag;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -31,6 +32,8 @@ public class FindFlightsUITest {
         capabillities.setBrowserName("chrome");
         wait = new WebDriverWait(driver, 6000);
     }
+    @Test
+    @WithTag(type="type", name="UI")
     /**
      * To test the UI
      * @throws Exception
