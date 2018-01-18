@@ -48,7 +48,7 @@ public class FindFlightsUITest {
             }
         });
 
-        assertEquals("URL must be http://localhost:8090/myapp/index.html", "http://localhost:8092/myapp/index.html", driver.getCurrentUrl());
+        assertEquals("URL must be http://localhost:8090/myapp/index.html", "http://localhost:8090/myapp/index.html", driver.getCurrentUrl());
         /** put other asserts as well **/
     }
     @AfterClass
