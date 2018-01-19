@@ -40,7 +40,7 @@ public class FindFlightsUITest {
      */
     public void testUI() throws Exception {
         /** Your application URL which you want to test **/
-        driver.get("http://localhost:8090/myapp/index.html");
+        driver.get("http://localhost:8080/portal");
         wait.until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver webDriver) {
 
@@ -48,7 +48,7 @@ public class FindFlightsUITest {
             }
         });
 
-        assertEquals("URL must be http://localhost:8090/myapp/index.html", "http://localhost:8090/myapp/index.html", driver.getCurrentUrl());
+        assertEquals("URL must be http://localhost:8080/portal", "http://localhost:8080/portal", driver.getCurrentUrl());
         /** put other asserts as well **/
     }
     @AfterClass
