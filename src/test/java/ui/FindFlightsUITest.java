@@ -48,12 +48,10 @@ public class FindFlightsUITest {
         wait.until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver webDriver) {
                 log.info("Please be patience .... Searching ...");
-                return webDriver.findElement(By.id("username")) != null;
+                return webDriver.findElement(By.id("username")) != null && webDriver.findElement(By.id("UIPortalLoginFormControl")) != null;
             }
         });
 
-        assertEquals("URL must be http://localhost:8080/portal", "http://localhost:8080/portal", driver.getCurrentUrl());
-        /** put other asserts as well **/
     }
     @AfterClass
     public static void tearDown() throws Exception {
