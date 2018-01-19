@@ -1,6 +1,7 @@
 package ui;
 
 import java.net.URL;
+import java.util.logging.Logger;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.WithTag;
@@ -10,6 +11,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -20,6 +22,7 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(SerenityRunner.class)
 public class FindFlightsUITest {
+    private static final Logger log = Logger.getLogger(String.valueOf(FindFlightsUITest.class));
 
     private static Wait<WebDriver> wait;
     private static DesiredCapabilities capabillities;
@@ -41,10 +44,11 @@ public class FindFlightsUITest {
     public void testUI() throws Exception {
         /** Your application URL which you want to test **/
         driver.get("http://localhost:8080/portal");
+
         wait.until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver webDriver) {
-
-                return webDriver.findElement(By.tagName("title")) != null;
+                log.info("Please be patience .... Searching ...");
+                return webDriver.findElement(By.id("username")) != null;
             }
         });
 
