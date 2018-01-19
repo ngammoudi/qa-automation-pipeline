@@ -43,7 +43,7 @@ public class FindFlightsUITest {
      */
     public void testUI() throws Exception {
         /** Your application URL which you want to test **/
-        driver.get("http://localhost:8080/portal");
+        driver.get("http://http://172.17.0.3:8080/portal");
 
         wait.until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver webDriver) {
